@@ -1,0 +1,268 @@
+{% extends 'base/base.html' %}
+{%load static %}
+{%block content%}
+<!-- 
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Rye&display=swap" rel="stylesheet">
+ -->
+
+
+<div class="row" >
+<div class="center">
+<h4 class="red-text text-lighten-1" style="font-family:cursive;margin: 4rem 0 4% 0;font-size:2rem">Search for dorms u like!!</h4>
+</div>
+ <div class="row">
+    <div id="wrapper1" class="col s3 offset-s2 input-field">
+      <input type="date" id="start1" class="datepicker-start" />
+      <label for="start1" class="black-text text-lighten-2" style="font-size:1.4rem;font-family:cursive">Check-in</label>
+    </div>
+    <div id="wrapper2" class="col s3 input-field">
+      <input type="date" id="end1" class="datepicker-end"/>
+      <label for="end1" class="black-text text-lighten-2" style="font-size:1.4rem;font-family:cursive">Check-out</label>
+    </div>
+    <div id="wrapper3" class="col s3 offset-s2 input-field">
+        <input type="text" id="location" value="" />
+        <label for="location" class="black-text text-lighten-2" style="font-size:1.4rem;font-family:cursive">City</label>
+    </div>
+<div class="center">
+<a class="btn red lighten-1" href="" style="padding: 25px;line-height:3px;font-family:cursive;text-transform:capitalize;font-size:0.9rem" id="show_me_rooms">Check Availability</a>
+</div>
+</div>
+</div>
+<div class="divider"></div>
+
+<div class="row" style="margin-top:3%">
+<div class="container">
+    <h3 class="center" style="font-family:cursive;margin-bottom:7%;margin-top:5%">Amenities</h3>
+<div class="col1 l2 m3 s4">
+<div class="card-panel grey lighten-1">
+<div class="center">
+<i class="material-icons red-text small">restaurant</i><br>
+24&#10006;7 Restaurants
+</div>
+</div>
+</div>
+<div class="col2 l2 m3 s4">
+<div class="card-panel grey lighten-1">
+<div class="center">
+<a href="https://www.youtube.com/watch?v=Ux5cQbO_ybw">
+<i class="material-icons red-text small">accessibility</i><br>
+</a>
+Gym
+</div>
+</div>
+</div>
+<div class="col2 l2 m3 s4">
+<div class="card-panel grey lighten-1">
+<div class="center">
+<i class="material-icons red-text small">local_library</i><br>
+Library
+</div>
+</div>
+</div>
+<div class="col1 l2 m3 s4">
+<div class="card-panel grey lighten-1">
+<div class="center">
+<i class="material-icons red-text small">free_breakfast</i><br>
+Free Breakfast
+</div>
+</div>
+</div>
+<div class="col1 l2 m3 s4">
+<div class="card-panel grey lighten-1">
+<div class="center">
+<i class="material-icons red-text small">wifi</i><br>
+High speed wifi
+</div>
+</div>
+</div>
+<div class="col2 l2 m3 s4">
+<div class="card-panel grey lighten-1">
+<div class="center">
+<i class="material-icons red-text small">live_tv</i><br>
+LED TV
+</div>
+</div>
+</div>
+<div class="col2 l2 m3 s4">
+<div class="card-panel grey lighten-1">
+<div class="center">
+<i class="material-icons red-text small">local_airport</i><br>
+Airport transport
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+    <div class="container">
+    <h3 class="center" style="font-family:cursive;margin-bottom:7%;margin-top:5%">Rooms of all facilities</h3>
+        <div class="col l4 m6 s12">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{% static 'room1.jpg'%}" alt="">
+                    <a href="#" class="btn-floating btn-large halfway-fab waves-effect waves-light red white-text" style="font-size:0.8rem">&#x20b9; 1500</a>
+                </div>
+                <div class="card-content">
+                    <span class="card-title grey-text text-lighten-1">
+                       Single Bed Rooms
+                    </span>
+                </div>
+            </div>
+            {% csrf_token %}
+        </div>
+             <div class="col l4 m6 s12">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{% static 'dorm9.jpg'%}" alt="">
+                    <a href="#" class="btn-floating btn-large halfway-fab waves-effect waves-light red white-text" style="font-size:0.8rem">&#x20b9; 1700</a>
+                </div>
+                <div class="card-content">
+                    <span class="card-title grey-text text-lighten-1">
+                       Double Bed Rooms
+                    </span>
+                </div>
+            </div>
+        </div>
+             <div class="col l4 m6 s12">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{% static 'room3.jpg'%}" alt="">
+                    <a href="https://www.youtube.com/watch?v=qkIjt-V-zDg" class="btn-floating btn-large halfway-fab waves-effect waves-light red white-text" style="font-size:0.8rem">&#x20b9; 1500</a>
+                </div>
+                <div class="card-content">
+                    <span class="card-title grey-text text-lighten-1">
+                       King-sized Bed Rooms
+                    </span>
+                </div>
+            </div>
+        </div>
+          <div class="col l4 m6 s12">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{% static 'dorm7.jpg'%}" alt="">
+                    <a href="#" class="btn-floating btn-large halfway-fab waves-effect waves-light red white-text" style="font-size:0.8rem">&#x20b9; 2500</a>
+                </div>
+                <div class="card-content">
+                    <span class="card-title grey-text text-lighten-1">
+                       5-star Rooms
+                    </span>
+                </div>
+            </div>
+        </div>
+               <div class="col l4 m6 s12">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{% static 'dorm6.jpg'%}" alt="">
+                    <a href="#" class="btn-floating btn-large halfway-fab waves-effect waves-light red white-text" style="font-size:0.8rem">&#x20b9; 1000</a>
+                </div>
+                <div class="card-content">
+                    <span class="card-title grey-text text-lighten-1">
+                      Basic Rooms
+                    </span>
+                </div>
+            </div>
+        </div>
+               <div class="col l4 m6 s12">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{% static 'room4.jpg'%}" alt="">
+                    <a href="https://www.youtube.com/watch?v=Sag4AGymNr0" class="btn-floating btn-large halfway-fab waves-effect waves-light red white-text" style="font-size:0.8rem">&#x20b9; 3000</a>
+                </div>
+                <div class="card-content">
+                    <span class="card-title grey-text text-lighten-1">
+                      Beach view Rooms
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+// Accept datepicker-start or datepicker-end, as we need to initialize both anyway.
+$("input[class*='datepicker-']").pickadate({
+  selectMonths: false,
+  selectYears: 1,
+  format: 'dd/mmm/yyyy',
+  onSet: function(obj){
+    let thisPicker = $(this)[0].$node;
+
+    // Check if this is the start date
+    let classes = thisPicker.attr("class");
+    if (classes === undefined || classes.length === 0 || classes.indexOf("datepicker-start") < 0){
+      return;
+    }
+    // .datepicker-start must be wrapped in a div.input-field element (in this example), and
+    // .datepicker-end must be in the next div.input-field.  Change selectors for your conditions.
+    let parent1 = thisPicker.closest("div.input-field");    // This picker's parent
+    let parent2 = parent1.next("div.input-field");          // Next picker's parent
+    let picker2 = parent2.find(".datepicker-end");          // Matching 'end' picker
+    
+    // Set end picker minimum date, or whatever you need.
+    if(obj.select){
+      let dt = new Date(obj.select);
+      picker2.pickadate('picker').set('min', dt);
+    }
+    if(obj.hasOwnProperty('clear')){
+      picker2.pickadate('picker').set('min', false);
+    }
+  }
+});
+</script>
+<script>
+const room_btn=document.getElementById("show_me_rooms")
+room_btn.addEventListener("click",(e)=>
+{
+e.preventDefault()
+startDate=$('.datepicker-start').val();
+endDate=$('.datepicker-end').val();
+loc=$("#location").val();
+// ed = new Date(endDate)
+sd=new Date(startDate)
+td=new Date()
+if (sd<td || startDate.length==0 || endDate.length==0 || startDate>=endDate)
+{
+alert("Please choose a valid date")
+}
+else if (loc.length==0)
+{
+alert("select a location")
+}
+else
+{
+     var form = document.createElement("form");
+    var element1 = document.createElement("input"); 
+    var element2 = document.createElement("input");  
+    var element3 = document.createElement("input"); 
+    var element4 = document.createElement("input"); 
+
+    form.method = "POST";
+    form.action = "/book";   
+    
+    element1.name="start_date";
+    element1.type="text"
+    element1.value=startDate;
+    form.appendChild(element1);  
+
+    element2.name="end_date";
+    element2.type="text"
+    element2.value=endDate;
+    form.appendChild(element2);  
+
+    element3.value=loc;
+    element3.name="location";
+    element3.type="text"
+    form.appendChild(element3);  
+
+    element4.value='{{csrf_token}}';
+    element4.name="csrfmiddlewaretoken";
+    element4.type="hidden"
+    form.appendChild(element4);  
+
+    document.body.appendChild(form);
+    form.submit(); 
+}
+})
+</script>
+{% endblock %}
