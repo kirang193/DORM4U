@@ -25,7 +25,7 @@ SECRET_KEY = 'kd70*3-e22q4_2b33!ay*47kpo41g4_oduenmx9t3t4bvr7ynm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vecel.app', '.now.sh']
 
 
 # Application definition
@@ -129,5 +129,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static')
 ]
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'staticfiles_build','static'),
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
