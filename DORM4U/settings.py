@@ -79,8 +79,8 @@ DATABASES = {
         'NAME': 'DORM4U',
         'USER': 'root',
         'PASSWORD': 'Kiran@057',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'HOST': '0.0.0.0',
+        'PORT': '10000',
         'OPTIONS': {
         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
         }
